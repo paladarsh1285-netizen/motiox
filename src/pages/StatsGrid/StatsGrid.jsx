@@ -41,7 +41,7 @@ function StatCard({ index, number, suffix, label, gradient, decorIcon }) {
   return (
     <div
       ref={ref}
-      className={`relative overflow-hidden rounded-2xl p-7 flex flex-col justify-between min-h-[200px] group transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl ${gradient}`}
+      className={`relative overflow-hidden rounded-2xl p-7 flex flex-col justify-between h-[400px] group transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl ${gradient}`}
       style={{ border: "1px solid rgba(255,255,255,0.06)" }}
     >
       {/* Index */}
@@ -139,14 +139,16 @@ export default function StatsGrid() {
       >
         <div className="w-full" style={{ maxWidth: "1500px" }}>
           {/* Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
 
             {/* Card 01 */}
-            <StatCard {...stats[0]} />
+            <div className="lg:col-span-2">
+              <StatCard {...stats[0]} />
+            </div>
 
             {/* Card 02 */}
             <div
-              className="relative overflow-hidden rounded-2xl p-7 flex flex-col justify-between min-h-[200px] group transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl bg-[#1e1e1e]"
+              className="relative overflow-hidden rounded-2xl p-7 flex flex-col justify-between h-[400px] group transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl bg-[#1e1e1e] lg:col-span-2"
               style={{ border: "1px solid rgba(255,255,255,0.06)" }}
             >
               <span
@@ -168,7 +170,7 @@ export default function StatsGrid() {
 
             {/* Card 03 — accent gradient, spans visually larger on lg */}
             <div
-              className="relative overflow-hidden rounded-2xl p-7 flex flex-col justify-between min-h-[200px] sm:col-span-2 lg:col-span-1 group transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              className="relative overflow-hidden rounded-2xl p-7 flex flex-col justify-between h-[400px] sm:col-span-2 lg:col-span-2 group transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
               style={{
                 background: "linear-gradient(135deg, #f97316 0%, #ef4444 60%, #ec4899 100%)",
                 border: "1px solid rgba(255,255,255,0.12)",
@@ -190,7 +192,7 @@ export default function StatsGrid() {
 
             {/* Card 04 — dark red, spans 2 cols on sm+ */}
             <div
-              className="relative overflow-hidden rounded-2xl p-7 flex flex-col justify-between min-h-[200px] sm:col-span-2 lg:col-span-1 group transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              className="relative overflow-hidden rounded-2xl p-7 flex flex-col justify-between h-[400px] sm:col-span-2 lg:col-span-3 group transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
               style={{
                 background: "radial-gradient(ellipse at top left, #4a1a1a 0%, #1e1e1e 60%)",
                 border: "1px solid rgba(255,255,255,0.06)",
@@ -212,7 +214,7 @@ export default function StatsGrid() {
 
             {/* Card 05 */}
             <div
-              className="relative overflow-hidden rounded-2xl p-7 flex flex-col justify-between min-h-[200px] sm:col-span-2 lg:col-span-2 group transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl bg-[#1e1e1e]"
+              className="relative overflow-hidden rounded-2xl p-7 flex flex-col justify-between h-[400px] sm:col-span-2 lg:col-span-3 group transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl bg-[#1e1e1e]"
               style={{ border: "1px solid rgba(255,255,255,0.06)" }}
             >
               <span
