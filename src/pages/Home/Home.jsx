@@ -39,13 +39,13 @@ const Home = () => {
                 </p>
                 <a
                     href="/contact"
-                    className="inline-flex items-center rounded-full bg-linear-to-r from-orange-500 via-pink-500 to-fuchsia-500 px-10 py-4 text-white font-bold shadow-xl transition transform hover:-translate-y-0.5 hover:scale-105"
+                    className="inline-flex items-center rounded-full bg-linear-to-r from-orange-500 via-pink-500 to-fuchsia-500 px-10 py-4 text-white font-bold shadow-xl transition transform hover:-translate-y-0.5 hover:scale-105 mt-6"
                 >
                     Start Your Project →
                 </a>
 
                 {/* Scroll indicator */}
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+                <div className="fixed bottom-8 right-8 animate-bounce rounded-full p-3 z-50" style={{background: "linear-gradient(135deg, #f97316, #ec4899)"}}>
                     <svg
                         className="w-8 h-8 text-white"
                         fill="none"
@@ -55,7 +55,7 @@ const Home = () => {
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                     >
-                        <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        <path d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
                     </svg>
                 </div>
             </div>
