@@ -238,23 +238,29 @@ export default function AwardWinnings() {
           </div>
 
           {/* Text Content */}
-          <div className="fade-up-4 flex-1 max-w-2xl">
+          <div className="fade-up-4 flex-1 max-w-4xl text-left">
             <h2
-              className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 leading-snug"
-              style={{ color: "#ffffff" }}
+              className="text-2xl sm:text-3xl lg:text-4xl font-black mb-6 sm:mb-8 text-left"
+              style={{
+                color: "#ffffff",
+                lineHeight: "1.2",
+                letterSpacing: "-0.02em",
+                fontSize: "clamp(1rem, 3vw, 2.5rem)"
+              }}
             >
-              We're the crafters of fascinating videos that associate with your
-              viewers personally.
+              We're the crafters of fascinating videos that associate with your viewers personally.
             </h2>
             <p
-              className="text-sm sm:text-base leading-relaxed"
-              style={{ color: "#9ca3af" }}
+              className="text-lg sm:text-xl lg:text-2xl font-normal leading-relaxed"
+              style={{
+                color: "#9ca3af",
+                lineHeight: "1.12"
+              }}
             >
-              From startups to well-known brands worldwide, we've completed
-              plenty of corporate video production projects for both. We ensure
-              each design not only captivates but also drives growth and
-              engagement. From concept to execution, our goal is to create
-              impactful brand experiences that leave a lasting impression.
+              From startups to well-known brands worldwide, we've completed plenty of corporate video
+              production projects for both. We ensure each design not only captivates but also drives
+              growth and engagement. From concept to execution, our goal is to create impactful brand
+              experiences that leave a lasting impression.
             </p>
           </div>
         </div>
