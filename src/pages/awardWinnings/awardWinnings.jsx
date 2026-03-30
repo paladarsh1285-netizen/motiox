@@ -135,16 +135,7 @@ export default function AwardWinnings() {
         }
       );
 
-      // Parallax effect for the badge
-      gsap.to(badgeRef.current, {
-        y: -50,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1
-        }
-      });
+
     }, containerRef);
 
     return () => {
