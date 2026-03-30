@@ -110,6 +110,7 @@ const Home = () => {
     const subtitleText = "your audience";
 
     return (
+        <>
         <motion.div
             ref={containerRef}
             className="relative w-full h-screen overflow-hidden"
@@ -229,30 +230,7 @@ const Home = () => {
                     </motion.span>
                 </motion.a>
 
-                {/* Animated scroll indicator */}
-                <motion.div
-                    className="fixed bottom-8 right-8 rounded-full p-3 z-50 cursor-pointer"
-                    style={{ background: "linear-gradient(135deg, #f97316, #ec4899)" }}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 2, type: 'spring', stiffness: 200 }}
-                    whileHover={{ scale: 1.2, rotate: 180 }}
-                    whileTap={{ scale: 0.9 }}
-                >
-                    <motion.svg
-                        className="w-8 h-8 text-white"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        animate={{ y: [0, -10, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-                    >
-                        <path d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-                    </motion.svg>
-                </motion.div>
+
 
                 {/* Decorative animated particles */}
                 {[...Array(6)].map((_, i) => (
@@ -279,6 +257,32 @@ const Home = () => {
                 ))}
             </motion.div>
         </motion.div>
+
+        {/* Animated scroll indicator - Fixed position, always visible */}
+        <motion.div
+            className="fixed bottom-8 right-8 rounded-full p-3 z-50 cursor-pointer"
+            style={{ background: "linear-gradient(135deg, #f97316, #ec4899)" }}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 2, type: 'spring', stiffness: 200 }}
+            whileHover={{ scale: 1.2, rotate: 180 }}
+            whileTap={{ scale: 0.9 }}
+        >
+            <motion.svg
+                className="w-8 h-8 text-white"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+            >
+                <path d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+            </motion.svg>
+        </motion.div>
+        </>
     );
 };
 
