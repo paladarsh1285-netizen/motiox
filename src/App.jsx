@@ -4,6 +4,7 @@ import './App.css'
 import StatsGrid from './pages/StatsGrid/StatsGrid'
 import useLenis from './hooks/useLenis'
 import CursorFollower from './components/common/CursorFollower'
+import ServicesSection from './pages/services section/ServicesSection'
 
 function App() {
   useLenis()
@@ -14,6 +15,7 @@ function App() {
       <Home />
       <AwardWinnings />
       <StatsGrid />
+      <ServicesSection />
     </>
   )
 }
