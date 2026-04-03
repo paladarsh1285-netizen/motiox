@@ -147,7 +147,7 @@ export default function AwardWinnings() {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen w-full flex flex-col"
+      className="min-h-screen w-full flex flex-col overflow-hidden"
       style={{ backgroundColor: "#1a1a1a", fontFamily: "'Syne', sans-serif" }}
     >
       {/* Google Font Import */}

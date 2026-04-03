@@ -224,7 +224,7 @@ export default function ServicesSection() {
 
       {/* MOBILE: 2x2 grid */}
       <section
-        className="grid grid-cols-2 md:hidden w-full bg-black"
+        className="grid grid-cols-2 md:hidden w-full bg-black overflow-hidden"
         style={{ minHeight: "100svh" }}
       >
         {services.map((service) => (
