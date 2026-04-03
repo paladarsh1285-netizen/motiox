@@ -9,6 +9,7 @@ import SelectedAwards from './pages/selected Awards/SelectedAwards'
 import MarqueeBanner from './pages/Marqueebanner/Marqueebanner'
 import Recognition from './pages/Recognition/Recognition'
 import AwardsTable from './pages/Awardstable/Awardstable'
+import Footer from './pages/Footer/Footer'
 
 function App() {
   useLenis()
@@ -24,6 +25,7 @@ function App() {
       <MarqueeBanner />
       <Recognition />
       <AwardsTable />
+      <Footer />
     </>
   )
 }
