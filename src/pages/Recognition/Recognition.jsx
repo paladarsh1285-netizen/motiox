@@ -1,6 +1,4 @@
 import { useState } from "react";
-import MarqueePill from "../awardWinnings/MarqueePill";
-import { motion } from "framer-motion";
 
 const works = [
   {
@@ -117,11 +115,11 @@ const rightVariants = {
   }
 };
 
-export default function SelectedWorks() {
+export default function Recognition() {
   return (
     <section
       className="w-full overflow-hidden"
-      style={{ backgroundColor: "#1a1a1a", fontFamily: "'DM Sans', sans-serif" }}
+      style={{ backgroundColor: "#000000", fontFamily: "'DM Sans', sans-serif" }}
     >
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
@@ -129,79 +127,21 @@ export default function SelectedWorks() {
       <div
         className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12"
       >
-        <MarqueePill />
         {/* Divider */}
         <div className="border-t border-white/10 mb-6" />
         {/* Header */}
         <div className="flex items-start justify-between mb-8">
           <h1 className="text-3xl tracking-tight leading-tight" style={{ fontWeight: 800 }}>
-            Selected{" "}
-            <span style={{ color: "#e8356d", fontStyle: "italic" }}>works</span>
+            Awards{" "}
+            <br />
+            <span style={{ fontStyle: "italic", background: "linear-gradient(90deg, #f97316 30%, #ec4899 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>& recognition</span>
           </h1>
 
-          <div className="text-right max-w-[200px]" >
-            <h4 className="text-[20px] uppercase tracking-widest text-gray-500 mb-1">
-              Our collaborations
+          <div className="text-right max-w-[400px]" >
+            <h4 className="text-[20px] uppercase tracking-widest text-white mb-1">
+              Efforts to receive worthy rewards, awards & recognition help us affirm our brand.
             </h4>
-            <h3 className="text-[20px] text-gray-300 leading-relaxed">
-              Latest works with our{" "}
-              <span style={{ color: "#e8356d" }}>friends</span> &{" "}
-              <span style={{ color: "#e8356d" }}>partners</span>
-            </h3>
           </div>
-        </div>
-
-
-
-        {/* Grid Row 1 — large left, small right */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 mb-3">
-          {/* Large card - slides from left */}
-          <motion.div 
-            variants={leftVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            className="col-span-1 sm:col-span-1 lg:col-span-3 aspect-[4/3] lg:aspect-auto lg:h-[500px]"
-          >
-            <WorkCard work={works[0]} />
-          </motion.div>
-          {/* Small card - slides from right */}
-          <motion.div 
-            variants={rightVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            className="col-span-1 sm:col-span-1 lg:col-span-2 aspect-[4/3] lg:aspect-auto lg:h-[500px]"
-          >
-            <WorkCard work={works[1]} />
-          </motion.div>
-        </div>
-
-        {/* Divider */}
-        <div className="border-t border-white/10 mb-3" />
-
-        {/* Grid Row 2 — small left, large right */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
-          {/* Small card - slides from left */}
-          <motion.div 
-            variants={leftVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            className="col-span-1 sm:col-span-1 lg:col-span-2 aspect-[4/3] lg:aspect-auto lg:h-[500px]"
-          >
-            <WorkCard work={works[2]} />
-          </motion.div>
-          {/* Large card - slides from right */}
-          <motion.div 
-            variants={rightVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            className="col-span-1 sm:col-span-1 lg:col-span-3 aspect-[4/3] lg:aspect-auto lg:h-[500px]"
-          >
-            <WorkCard work={works[3]} />
-          </motion.div>
         </div>
       </div>
     </section>
